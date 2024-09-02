@@ -1,0 +1,29 @@
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+#form-add-todo{
+    display: flex;
+    gap: 0.5rem;
+}
+
+#form-add-todo imput{
+    flex: 1;
+    border: 1px solid black;
+    height: 2rem;
+    padding: 0 0.5rem;
+}
+
+#form-add-todo button {
+    background: yellow;
+    border: none;
+    width 3rem;
+}
+
+#listaEncadeada {
+    list-style: none;
+    word-wrap: break-word;
+    padding: 0;
+    border: 1px solid white;
+}

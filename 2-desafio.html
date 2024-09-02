@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>Lista Dinâmica</title>
+</head>
+<body>
+    <div class="container">
+        <for id="form-add-todo">
+            <input type="text" id="elementoLista">
+            <button onClick="addItem()">+</button>
+        </for>
+        <ul id="listaEncadeada"></ul>
+        <script>
+            function addItem() {
+                var itemRecebido = document.getElementById("elementoLista").value.trim();
+
+                if (itemRecebido === "") {
+                    alert("Digite um item para a lista");
+                    return;
+                }
+
+                var li = document.createElement("li");
+                var checkbox = document.createElement("input");
+                checkbox.type = "checkbox";
+                li.appendChild(checkbox);
+                li.appendChild(document.createTextNode(" " + itemRecebido));
+                document.getElementById("listaEncadeada").appendChild(li);
+                document.getElementById("elementoLista").value = "";
+        }
+        </script>
+    </div>
+</body>
+</html>
